@@ -54,5 +54,11 @@ abstract class AbstractAnimal
     abstract String breath();       // abstract method
     abstract String reproduce();    // abstract method
 
-
+    
+    // allows us to print object string w/details not just where object is in memory
+    public String toString()
+    {
+        String str = "id=" + id + ", name=" + name + ", yearNamed=" + yearNamed;
+        return str;
+    }
 }
