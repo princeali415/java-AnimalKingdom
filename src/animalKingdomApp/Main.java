@@ -116,8 +116,12 @@ public class Main
         List<AbstractAnimal> animalsList1758 = filteredAnimals(animalArrList, v -> v.getYearNamed() == 1758);
         animalsList1758.sort((v1,v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
         animalsList1758.forEach(item -> System.out.println(item.toFormat()));
-        
+        System.out.println();
 
+        System.out.println("***STRECTH***\n");
+        List<AbstractAnimal> stretchArrList = filteredAnimals(animalArrList, animal -> animal instanceof Mammals); // instance of is a comparison operator which checks instance is of a specified class, subclass ore interface
+        stretchArrList.sort((v1, v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
+        stretchArrList.forEach(item -> System.out.println(item.toFormat()));
     }
 
     public static void main(String[] arg)
