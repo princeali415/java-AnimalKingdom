@@ -58,7 +58,12 @@ abstract class AbstractAnimal
     // allows us to print object string w/details not just where object is in memory
     public String toString()
     {
-        String str = "id=" + id + ", name=" + name + ", yearNamed=" + yearNamed;
+        String str = "Animals{id=" + id + ", name=" + name + ", yearNamed=" + yearNamed + "}\n";
         return str;
+    }
+
+    public String toFormat(){
+        String string = getName() + " "+ reproduce() + " "+ move() + " "+ breath() + " " + getYearNamed();
+        return string;
     }
 }
