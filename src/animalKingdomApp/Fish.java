@@ -9,7 +9,6 @@ public class Fish extends AbstractAnimal
     }
 
     // must have methods from abstract class
-
     @Override
     public String move()
     {
